@@ -1,0 +1,79 @@
+body{
+    background-color:black;
+    color:silver;
+    font-family:"Liberation Sans",Helvetica,Arial,Sans-Serif;
+    font-size:0.9em;
+    margin-right:80px;
+    margin-left:80px;
+}
+
+header{
+    padding:10px;
+    color:white;
+    background-color:#111122;
+    border-bottom: orange 3px solid;
+
+}
+
+footer{
+    padding:10px;
+    color:white;
+    background-color:#111122;
+    border-top: orange 3px solid;
+    border-bottom: orange 3px solid;
+}
+
+section {
+    color:silver;
+    margin:5px;
+    padding:10px;
+    background-color:#111122;
+}
+
+article {
+    margin:5px;
+    padding:10px;
+    background-color:black;
+    color:silver;
+    margin-right:25px;
+    margin-left:25px;
+}
+
+nav ul{
+    padding:0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 5px;
+    font-size:18px;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+p {
+    text-align:justify;
+    text-indent:25px;
+}
+
+a:link {
+    color:silver;
+    text-decoration:none;
+
+}
+
+a:visited{
+    color:silver;
+    text-decoration:none;
+}
+
+.resaltar{
+    color:red;
+}
+
+@media(max-width: 768px){
+    body{
+	margin-right:20px;
+	margin-left:20px
+    }
+}

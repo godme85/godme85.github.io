@@ -71,6 +71,10 @@ a:visited{
     color:red;
 }
 
+.publicado{
+    color:#444444;
+}
+
 @media(max-width: 768px){
     body{
 	margin-right:20px;

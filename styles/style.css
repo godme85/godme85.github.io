@@ -30,6 +30,18 @@ section {
     background-color:#111122;
 }
 
+a:link {
+    color:silver;
+    text-decoration:none;
+
+}
+
+a:visited{
+    color:silver;
+    text-decoration:none;
+}
+
+
 article {
     margin:5px;
     padding:10px;
@@ -38,6 +50,12 @@ article {
     margin-right:25px;
     margin-left:25px;
 }
+
+article a:link, article a:visited{
+    color: royalblue;
+}
+
+article a:hover{color: lightblue;}
 
 nav ul{
     padding:0;
@@ -54,17 +72,6 @@ nav ul li{
 p {
     text-align:justify;
     text-indent:25px;
-}
-
-a:link {
-    color:silver;
-    text-decoration:none;
-
-}
-
-a:visited{
-    color:silver;
-    text-decoration:none;
 }
 
 .resaltar{
@@ -89,8 +96,6 @@ a:visited{
 }
 .entry h2 { margin: 5px auto 2px auto;}
 
-.entry a{color: royalblue;}
-.entry a:hover{color: lightblue;}
 
 @media(max-width: 768px){
     body{

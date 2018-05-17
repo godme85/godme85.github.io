@@ -75,6 +75,21 @@ a:visited{
     color:#444444;
 }
 
+.entry{
+    border-left: 10px solid darkslategray;
+    padding: 0px 10px 0px 10px;
+    border-radius: 0 30px 30px 0;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: black;
+    font-family: "Liberation Serif","Times New Roman", sans-serif;
+}
+
+.entry h2 { margin: 5px auto 2px auto;}
+
+.entry a{color: royalblue;}
+.entry a:hover{color: lightblue;}
+
 @media(max-width: 768px){
     body{
 	margin-right:20px;

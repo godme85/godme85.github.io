@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Blog github</title>
+<description>El rss de mis blogs y página</description>
+<language>es-mx</language>
+<link>https://godme85.github.io/rss.xml</link>
+<atom:link href="https://godme85.github.io/rss.xml" rel="self" type="application/rss+xml" />
+
+<!-- LB -->
+
+<item>
+<title>Creando un blog en github</title>
+<guid>https://godme85.github.io/blog.htm#creando-un-blog-en-github</guid>
+<pubDate>mié, 16 may 2018 22:35:53 -0500</pubDate>
+<description><![CDATA[
+<h2 id='creando-un-blog-en-github'>Creando un blog en github</h2><small>[<a aria-hidden="true" href="blog.htm#creando-un-blog-en-github">Enlace</a>&mdash;<a href="blog/creando-un-blog-en-github.html">Ir al post</a>]</small>
+
+<p>Como podrán darse cuenta, estoy desarrollando un proyecto en el cual utilizo una página html bastante simple a manera de blog. Esto no requiere de ninguna base de datos, y es sumamente simple.</p>
+
+<p>Recomiendo que sigan a Luke Smith, quien de manera indirecta ha sido mi gurú respecto al ser nerd :p</p>
+]]></description>
+</item>
+
+
+</channel>
+</rss>
+

@@ -40,7 +40,7 @@ finalize() { \
 	webdate=$(date '+%a, %d %b %Y %H:%M:%S %z')
 	tmpdir=$(mktemp -d)
 	echo -e "\n<item>\n<title>$title</title>\n<guid>$website$blogfile#$url</guid>\n<pubDate>$rssdate</pubDate>\n<description><![CDATA[\n$(cat $dir/blog/.drafts/$chosen)\n]]></description>\n</item>\n"> $tmpdir/rss.xml
-	echo -e "\n<article>\n$(cat $dir/blog/.drafts/$chosen)\n<small>$webdate</small>\n</article>\n" > $tmpdir/html.html
+	echo -e "\n<article>\n$(cat $dir/blog/.drafts/$chosen)\n<small>$webdate por Eduardo</small>\n</article>\n" > $tmpdir/html.html
 	sed -i "/<!-- LB -->/r $tmpdir/html.html" $blogfile
 	sed -i "/<!-- LB -->/r $tmpdir/rss.xml" $rssfile
 	mv $dir/blog/.drafts/$chosen $dir/blog/$chosen
@@ -53,7 +53,7 @@ delete() { \
 	[[ $choice =~ [Yy] ]] || exit
 	rm $dir/blog/$chosen && echo "Blog post deleted from directories."
 	sed -i "/<item/{:a;N;/<\/item>/!ba};/$base/d" $rssfile && echo "Entry removed from RSS feed file."
-	sed -i "/<div/{:a;N;/<\/div>/!ba};/$base/d" $blogfile && echo "HTML code removed from blogfile."
+	sed -i "/<article/{:a;N;/<\/article>/!ba};/$base/d" $blogfile && echo "HTML code removed from blogfile."
 	}
 
 case "$1" in

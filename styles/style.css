@@ -81,10 +81,10 @@ a:visited{
     border-radius: 0 30px 30px 0;
     margin-bottom: 20px;
     background-color: #333;
-    color: black;
     font-family: "Liberation Serif","Times New Roman", sans-serif;
 }
 
+.entry p{color: black;}
 .entry h2 { margin: 5px auto 2px auto;}
 
 .entry a{color: royalblue;}

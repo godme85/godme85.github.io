@@ -4,7 +4,7 @@
 rssfile="rss.xml"
 blogfile="blog.htm"
 stylesheet="\/styles\/style.css"
-author="Eduardo\ Mejía"
+author="Eduardo Mejía"
 website="https://godme85.github.io/"
 dir=$(pwd)
 

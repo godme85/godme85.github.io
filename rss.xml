@@ -11,6 +11,8 @@
 
 <!-- LB -->
 
+
+
 <item>
 <title>Pronto más reseñas</title>
 <guid>https://godme85.github.io/blog.htm#pronto-más-reseñas</guid>
@@ -72,18 +74,6 @@
 
 
 
-<item>
-<title>Creando un blog en github</title>
-<guid>https://godme85.github.io/blog.htm#creando-un-blog-en-github</guid>
-<pubDate>mié, 16 may 2018 22:35:53 -0500</pubDate>
-<description><![CDATA[
-<h2 id='creando-un-blog-en-github'>Creando un blog en github</h2><small>[<a aria-hidden="true" href="blog.htm#creando-un-blog-en-github">Enlace</a>&mdash;<a href="blog/creando-un-blog-en-github.html">Ir al post</a>]</small>
-
-<p>Como podrán darse cuenta, estoy desarrollando un proyecto en el cual utilizo una página html bastante simple a manera de blog. Esto no requiere de ninguna base de datos, y es sumamente simple.</p>
-
-<p>Recomiendo que sigan a Luke Smith, quien de manera indirecta ha sido mi gurú respecto al ser nerd :p</p>
-]]></description>
-</item>
 
 
 </channel>

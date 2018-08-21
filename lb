@@ -18,15 +18,18 @@ getHelp() { \
 }
 
 listandReturn() { \
-	echo "Listing contents of $1."
+	#echo "Listing contents of $1."
+	echo "Enlistando los contenidos de $1."
 	ls $1 | nl
-	read -p "Pick an entry by number to $2, or press ctrl-c to cancel. " number
+	#read -p "Pick an entry by number to $2, or press ctrl-c to cancel. " number
+	read -p "Escoja una entrada por número para $2, o pulse ctrl-c para cancelar. " number
 	chosen=$(basename $(ls $1 | nl | grep -w  "$number" | awk '{print $2}'))
 	}
 
 getTitle() { \
-	echo "Post will be stored as draft in $dir/blog/.drafts until finalized."
-	read -p "Give a title for your post: " title
+	#echo "Post will be stored as draft in $dir/blog/.drafts until finalized."
+	echo "El post se almacenará como borrador en $dir/blog/.drafts hasta que sea finalizado"
+	read -p "Escriba un título para su publicación: " title
 	url=$(echo $title | sed -e "s/'\|\"\|=\|+\|_\|,\|:\|;\|?\|!\|@\|\*\|&\|(\|)\|[\|]\|<\|>//g;s/ /-/g" | tr '[:upper:]' '[:lower:]') ;}
 
 postNew() { \
@@ -34,7 +37,7 @@ postNew() { \
 	echo -e "<h2 id='$url'>$title</h2><small>[<a aria-hidden=\"true\" href=\"$blogfile#$url\">Enlace</a>&mdash;<a href=\"blog/$url.html\">Ir al post</a>]</small>\n\n<++>" >> $dir/blog/.drafts/$url.html && vim $dir/blog/.drafts/$url.html ;}
 
 finalize() { \
-	listandReturn $dir/blog/.drafts finalize
+	listandReturn $dir/blog/.drafts finalizar
 	url=$(cat $dir/blog/.drafts/$chosen | grep -o "<h2 id='\(.\)*'>" | cut -d "'" -f2)
 	title=$(cat $dir/blog/.drafts/$chosen | grep -o "<h2 id='\(.\)*h2>" |sed -e 's/<[^>]*>//g')
 	echo "AddDescription \"$title\" $chosen" >> $dir/blog/.htaccess
@@ -52,13 +55,16 @@ finalize() { \
 }
 
 delete() { \
-	listandReturn "$dir/blog/*.html" delete
+	listandReturn "$dir/blog/*.html" eliminar
 	base=$(echo $chosen | cut -f1 -d'.')
-	read -p "Really delete \"$base\"? (y,N) " choice
-	[[ $choice =~ [Yy] ]] || exit
-	rm $dir/blog/$chosen && echo "Blog post deleted from directories."
-	sed -i "/<item/{:a;N;/<\/item>/!ba};/$base/d" $rssfile && echo "Entry removed from RSS feed file."
-	sed -i "/<article/{:a;N;/<\/article>/!ba};/$base/d" $blogfile && echo "HTML code removed from blogfile."
+	read -p "¿En verdad desea eliminar \"$base\"? (s,N) " choice
+	[[ $choice =~ [Ss] ]] || exit
+	#rm $dir/blog/$chosen && echo "Blog post deleted from directories."
+	rm $dir/blog/$chosen && echo "La entrada del blog fue eliminada de los directorios"
+	#sed -i "/<item/{:a;N;/<\/item>/!ba};/$base/d" $rssfile && echo "Entry removed from RSS feed file."
+	sed -i "/<item/{:a;N;/<\/item>/!ba};/$base/d" $rssfile && echo "La entrada fue eliminada del archivo RSS"
+	#sed -i "/<article/{:a;N;/<\/article>/!ba};/$base/d" $blogfile && echo "HTML code removed from blogfile."
+	sed -i "/<article/{:a;N;/<\/article>/!ba};/$base/d" $blogfile && echo "Código HTML eliminado del archivo del blog."
 	}
 
 case "$1" in
